@@ -130,6 +130,7 @@ def organize_schools(array)
       end
     end
   end
+end
   result_hash = h1.merge(h2,h3)
 end
 
