@@ -54,23 +54,13 @@ def count_elements(array)
   return new_array
 end
 
-def merge_data(array1, array2)
-  new_array = []
-  new_hash = {}
-  array1.each do |array1_hash|
-    index_array = array1_hash.keys
-    if arr
-    array1_hash.collect do |array1_hash_key, array1_hash_value|
-      new_hash[array1_hash_key] = array1_hash_value
-    end
-  end
-  array2.each do |array2_hash|
-    array2_hash.collect do |array2_hash_key, array2_hash_value|
-      new_hash[array2_hash_key] = array2_hash_value
-    end
-  end
-  new_array << new_hash
-  return new_array
+def merge_data(key, data)
+  new_keys_1 = {keys[0].keys.to_a[0] => data.to_a[0].to_a[0][0]}
+  new_data_1 = new_keys_1.merge(data[0].values.to_a[0])
+  new_keys_2 = {keys[1].keys.to_a[0] => data.to_a[0].to_a[1][0]}
+  new_data_2 = new_keys_2.merge(data[0].values.to_a[1])
+  [new_data_1, new_data_2]
+end
 end
 
 def find_cool(array)
