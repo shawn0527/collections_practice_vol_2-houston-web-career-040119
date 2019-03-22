@@ -54,7 +54,7 @@ def count_elements(array)
   return new_array
 end
 
-def merge_data_2(keys, data)
+def merge_data(keys, data)
   new_keys_1 = {keys[0].keys.to_a[0] => data.to_a[0].to_a[0][0]}
   new_data_1 = new_keys_1.merge(data[0].values.to_a[0])
   new_keys_2 = {keys[1].keys.to_a[0] => data.to_a[0].to_a[1][0]}
@@ -74,9 +74,9 @@ def merge_data_1(array1, array2)
   [new_hash_1, new_hash_2]
 end
 
-def merge_data(array1, array2)
-  new_hash_1 = array1[0].merge(array2[0].values.to_a[0])
-  new_hash_2 = array1[1].merge(array2[1].values.to_a[0])
+def merge_data_2(array1, array2)
+  new_hash_1 = array1[0].merge(array2[0].values[0])
+  new_hash_2 = array1[1].merge(array2[1].values[0])
   [new_hash_1, new_hash_2]
 end
 
