@@ -103,13 +103,13 @@ def organize_schools(array)
   array.each do |hash|
     hash.each do |school, location|
       location.each do |key, value|
-        if value == array[0].values[0].values
+        if value == "NYC"
           r1 << school
           h1[value] = r1
-        elsif value == array[0].values[2].values
+        elsif value == "SF"
           r2 << school
           h2[value] = r2
-        else value == array[0].values[3].values
+        else value == "Chicago"
           r3 << school
           h3[value] = r3
         end
