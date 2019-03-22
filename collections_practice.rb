@@ -112,7 +112,7 @@ def organize_schools(array)
   array.each do |hash|
     hash.each do |school, location|
       location.each do |key, value|
-        if value == loaction_array[0]
+        if value == location_array[0]
           r1 << school
           h1[value] = r1
         elsif value == location_array[1]
