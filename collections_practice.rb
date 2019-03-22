@@ -109,28 +109,22 @@ def organize_schools(array)
     end
   end
   location_array.uniq!
-  i = 0
   array.each do |hash|
     hash.each do |school, location|
       location.each do |key, value|
-        while i < location_array.length-1
-        if value == loaction_array[i]
+        if value == loaction_array[0]
           r1 << school
           h1[value] = r1
-          i += 1
-        elsif value == location_array[i]
+        elsif value == location_array[1]
           r2 << school
           h2[value] = r2
-          i += 1
-        else value == location_array[i]
+        else value == location_array[2]
           r3 << school
           h3[value] = r3
-          i += 1
         end
       end
     end
   end
-end
   result_hash = h1.merge(h2,h3)
 end
 
