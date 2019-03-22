@@ -93,6 +93,13 @@ def find_cool(array)
 end
 
 def organize_schools(array)
+  result_hash = {}
+  result_array = []
+  array.each do |hash|
+    hash.each do |school, location|
+      location.each do |key, value|
+        if value == array[0].values[0].values
+          result_hash[value] = school 
 
 end
 
