@@ -75,12 +75,8 @@ def merge_data_1(array1, array2)
 end
 
 def merge_data_2(array1, array2)
-  new_hash_1 = array1[0]
-  new_hash_2 = array1[1]
-  new_hash_1 = new_hash_1.merge(array2[0].values[0])
-  new_hash_2 = new_hash_2.merge(array2[1].values[0])
-  new_hash_1[array1[0].keys[1]] = array1[0].values[1]
-  new_hash_2[array1[1].keys[1]] = array1[1].values[1]
+  new_hash_1 = array1[0].merge(array2[0].values[0])
+  new_hash_2 = narray1[1].merge(array2[1].values[0])
   [new_hash_1, new_hash_2]
 end
 
