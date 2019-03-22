@@ -54,12 +54,14 @@ def count_elements(array)
   return new_array
 end
 
-def merge_data(key, data)
-  new_keys_1 = {keys[0].keys.to_a[0] => data.to_a[0].to_a[0][0]}
-  new_data_1 = new_keys_1.merge(data[0].values.to_a[0])
-  new_keys_2 = {keys[1].keys.to_a[0] => data.to_a[0].to_a[1][0]}
-  new_data_2 = new_keys_2.merge(data[0].values.to_a[1])
-  [new_data_1, new_data_2]
+def merge_data(array1, array2)
+  new_hash_1 = {array1[0].keys[0] => array1[0].values[0]}
+  new_hash_2 = {array1[1].keys[0] => array1[1].values[0]}
+  new_hash_1 = new_hash_1.merge(array2[0].values[0])
+  new_hash_2 = new_hash_2.merge(array2[1].values[0])
+  new_hash_1[array1[0].keys[1]] = array1[0].values[1]
+  new_hash_2[array1[1].keys[1]] = array1[1].values[1]
+  [new_hash_1, new_hash_2]
 end
 
 def find_cool(array)
