@@ -67,7 +67,7 @@ describe 'collections practice vol 2.' do
   }
 
   let(:schools) {
-    {
+    [
       "flatiron school bk" => {
         :location => "NYC"
       },
@@ -86,7 +86,7 @@ describe 'collections practice vol 2.' do
       "Hack Reactor" => {
         :location => "SF"
       }
-    }
+    ]
   }
   let(:organized_schools) {
     {"NYC"=>["flatiron school bk", "flatiron school", "general assembly"],
