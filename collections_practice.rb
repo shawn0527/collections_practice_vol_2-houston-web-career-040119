@@ -99,7 +99,7 @@ def organize_schools(array)
     hash.each do |school, location|
       location.each do |key, value|
         if value == array[0].values[0].values
-          result_hash[value] = school 
+          result_hash[value] = school
 
 end
 
