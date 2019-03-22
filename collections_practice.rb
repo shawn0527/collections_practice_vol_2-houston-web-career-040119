@@ -61,7 +61,6 @@ def merge_data(key, data)
   new_data_2 = new_keys_2.merge(data[0].values.to_a[1])
   [new_data_1, new_data_2]
 end
-end
 
 def find_cool(array)
 
