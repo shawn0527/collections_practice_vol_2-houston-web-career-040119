@@ -108,7 +108,7 @@ def organize_schools(array)
       end
     end
   end
-  location_array = location_array.uniq!
+  ocation_array.uniq!
   array.each do |hash|
     hash.each do |school, location|
       location.each do |key, value|
