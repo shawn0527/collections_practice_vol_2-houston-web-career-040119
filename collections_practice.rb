@@ -55,12 +55,12 @@ def count_elements(array)
 end
 
 def merge_data(array1, array2)
-  new_keys_1 = {array1[0].keys.to_a[0] => array2.to_a[0].to_a[0][0]}
-  new_data_1 = new_keys_1.merge(array2[0].values.to_a[0])
-  new_keys_2 = {array1[1].keys.to_a[0] => array2.to_a[0].to_a[1][0]}
-  new_data_2 = new_keys_2.merge(array2[0].values.to_a[1])
-  new_data_1[array1[0].keys.to_a[1]] = array1[0].values.to_a[1]
-  new_data_2[array1[1].keys.to_a[1]] = array1[1].values.to_a[1]
+  new_keys_1 = {array1[0].keys[0] => array2[0][0][0]}
+  new_data_1 = new_keys_1.merge(array2[0].values[0])
+  new_keys_2 = {array1[1].keys[0] => array2[0][1][0]}
+  new_data_2 = new_keys_2.merge(array2[0].values[1])
+  new_data_1[array1[0].keys[1]] = array1[0].values[1]
+  new_data_2[array1[1].keys[1]] = array1[1].values[1]
  [new_data_1, new_data_2]
 end
 
