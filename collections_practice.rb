@@ -94,13 +94,29 @@ end
 
 def organize_schools(array)
   result_hash = {}
-  result_array = []
+  h1 = {}
+  h2 = {}
+  h3 = {}
+  r1 = []
+  r2 = []
+  r3 = []
   array.each do |hash|
     hash.each do |school, location|
       location.each do |key, value|
         if value == array[0].values[0].values
-          result_hash[value] = school
-
+          r1 << school
+          h1[value] = r1
+        elsif value == array[0].values[2].values
+          r2 << school
+          h2[value] = r2
+        else value == array[0].values[3].values
+          r3 << school
+          h3[value] = r3
+        end
+      end
+    end
+  end
+  result_hash = h1.merge(h2,h3)
 end
 
 # your code goes here
