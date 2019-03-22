@@ -97,21 +97,35 @@ def organize_schools(array)
   h1 = {}
   h2 = {}
   h3 = {}
+  location_array = []
   r1 = []
   r2 = []
   r3 = []
   array.each do |hash|
     hash.each do |school, location|
       location.each do |key, value|
-        if value == "NYC"
+        location_array << value
+      end
+    end
+  end
+  location_array.uniq!
+  i = 0
+  array.each do |hash|
+    hash.each do |school, location|
+      location.each do |key, value|
+        while i < location_array.length-1
+        if value == loaction_array[i]
           r1 << school
           h1[value] = r1
-        elsif value == "SF"
+          i += 1
+        elsif value == location_array[i]
           r2 << school
           h2[value] = r2
-        else value == "Chicago"
+          i += 1
+        else value == location_array[i]
           r3 << school
           h3[value] = r3
+          i += 1
         end
       end
     end
